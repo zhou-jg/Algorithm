@@ -7,7 +7,7 @@ package util;
  * @param <T> something's type
  */
 public class Pair<T> {
-	public final T left, right;
+	private final T left, right;
 	public Pair(T left, T right){
 		this.left = left;
 		this.right = right;
