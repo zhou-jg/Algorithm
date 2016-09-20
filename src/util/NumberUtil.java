@@ -18,4 +18,36 @@ public class NumberUtil {
 	public static int flip(int bit){
 		return 1^bit;
 	}
+	
+	/**
+	 * 
+	 * @param a
+	 * @return max value of the array, Integer.MIN_VALUE if a is empty.
+	 */
+	public static int max(int... a){
+		int result = Integer.MIN_VALUE;
+		for (int i = 0; i<a.length; i++){
+			if (result < a[i]){
+				result = a[i];
+			}
+		}
+		return result;
+	}
+	
+	/**
+	 * See also: Apache commons-lang (ArrayUtils.java)
+	 * @param a
+	 * @return
+	 */
+	public static int[] fromObjects(Integer[] a){
+		if (a==null){
+			return null;
+		}else{
+			int[] res = new int[a.length];
+			for (int i=0; i<a.length; i++){
+				res[i] = a[i].intValue();
+			}
+			return res;
+		}
+	}
 }

@@ -62,10 +62,5 @@ public class MasterMind {
 		
 		return new Pair<Integer>(right, wrong);
 	}
-	
-	public static void main(String[] args){
-		MasterMind mm = new MasterMind(new Color[]{Color.R, Color.G, Color.B, Color.Y});
-		Pair<Integer> p = mm.guess(new Color[]{Color.G, Color.G, Color.R, Color.R});
-		System.out.println(p.getLeft() + "; " + p.getRight());
-	}
+		
 }

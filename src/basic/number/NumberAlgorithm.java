@@ -56,9 +56,18 @@ public class NumberAlgorithm {
 		return a * k + b * q;
 	}
 	
-	
-	
-	public static void main(String[] args){
-		System.out.println(max(4, 8));
+	/**
+	 * not allowed to use arithmetic operations.
+	 * @param a
+	 * @param b
+	 * @return
+	 */
+	@Algorithm
+	public static int sum(int a, int b){
+		if (b==0) return a;
+		int sum = a ^ b;
+		int carry = (a & b) << 1;
+		return sum(sum, carry);
 	}
+	
 }
