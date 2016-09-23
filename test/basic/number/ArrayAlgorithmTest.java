@@ -29,4 +29,15 @@ public class ArrayAlgorithmTest {
 		assertEquals(13, p.getRight().intValue());		
 	}
 
+	@Test
+	public void testFindMinFromOrderedArrayAfterRotation(){
+		int[] array = new int[] {3,4,5,6,7,1,2};
+		assertEquals(1, ArrayAlgorithm.minByDivide(array));
+		
+		array = new int[] {3,4,4,5,6,7,1,1,2};
+		assertEquals(1, ArrayAlgorithm.minByDivide(array));
+		
+		array = new int[] {3,4,5,6,1,2};
+		assertEquals(1, ArrayAlgorithm.minByDivide(array));
+	}
 }

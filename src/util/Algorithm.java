@@ -6,5 +6,5 @@ package util;
  *
  */
 public @interface Algorithm {
-
+	String kind() default "N/A";
 }
