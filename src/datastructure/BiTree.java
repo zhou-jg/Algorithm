@@ -34,4 +34,8 @@ public class BiTree<T>{
 		this.data = content;
 	}
 
+	@Override
+	public String toString(){
+		return data.toString();
+	}
 }
