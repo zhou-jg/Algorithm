@@ -1,5 +1,7 @@
 package util;
 
+import java.util.Objects;
+
 public class NumberUtil {
 	/**
 	 * 
@@ -57,5 +59,21 @@ public class NumberUtil {
 			result *= i;
 		}
 		return result;
+	}
+	
+	/**
+	 * 交换指定索引的数组元素
+	 * @param array
+	 * @param i
+	 * @param j
+	 */
+	public static void swap(int[] array, int i, int j){
+		Objects.requireNonNull(array);
+		
+		if (i != j){
+			int tmp = array[i];
+			array[i] = array[j];
+			array[j] = tmp;
+		}
 	}
 }
