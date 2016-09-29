@@ -9,7 +9,7 @@ import static util.NumberUtil.swap;
 
 public class MergeSortWithForkJoin {
 	/**
-	 * 利用 Fork/Join 实现数组排序
+	 * 利用 Fork/Join 实现数组归并排序
 	 * @param array
 	 * @return
 	 */
