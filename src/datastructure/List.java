@@ -1,5 +1,7 @@
 package datastructure;
 
+import java.util.ArrayList;
+
 public class List<T> {
 	private T data;
 	private List<T> next; 
@@ -38,5 +40,15 @@ public class List<T> {
 			}
 		}
 		return false;
+	}
+	
+	public T[] toArray(T[] a){
+		ArrayList<T> ret = new ArrayList<T>();
+		List<T> node = this;
+		while (node != null){
+			ret.add(node.getData());
+			node = node.getNext();
+		}
+		return ret.toArray(a);
 	}
 }
