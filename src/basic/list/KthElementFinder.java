@@ -9,7 +9,7 @@ import datastructure.List;
 /**
  * 找到单向链表中的倒数第 k 的元素
  * 来源：Gayle L. McDowell著的《Cracking the coding interview》（
- * 程序员面试金典
+ * 程序员面试金典）
  * @author Jingang Zhou
  *
  */
