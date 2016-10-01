@@ -76,4 +76,22 @@ public class NumberUtil {
 			array[j] = tmp;
 		}
 	}
+	
+	/**
+	 * 判断是否是奇数
+	 * @param k
+	 * @return
+	 */
+	public static boolean isOdd(int k){
+		return (k & 1) == 1;
+	}
+	
+	/**
+	 * 判断是否是偶数
+	 * @param k
+	 * @return
+	 */
+	public static boolean isEven(int k){
+		return (k & 1) == 0;
+	}
 }
