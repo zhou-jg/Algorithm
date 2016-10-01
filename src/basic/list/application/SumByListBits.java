@@ -22,8 +22,8 @@ public class SumByListBits {
 	 * @return
 	 */
 	@Algorithm
-	public static int sum(List<Integer> h1, List<Integer> h2, boolean isPositive){
-		return getNum(h1, isPositive) + getNum(h2, isPositive);
+	public static List<Integer> sum(List<Integer> h1, List<Integer> h2, boolean isPositive){
+		return toList(getNum(h1, isPositive) + getNum(h2, isPositive), isPositive);
 	}
 	
 	private static int getNum(List<Integer> h, boolean isPositive){
@@ -39,5 +39,29 @@ public class SumByListBits {
 			h = h.getNext();
 		}
 		return num;
+	}
+	
+	private static List<Integer> toList(int num, boolean isPositive){
+		List<Integer> head = null;
+		//游标
+		List<Integer> tmp = null;
+		while (num > 0){
+			int bit = num % 10;
+			num /= 10;
+			List<Integer> node = new List<Integer>(bit);
+			if (tmp == null){
+				tmp = node;
+				head = tmp;//负向时的头指针
+			}else{
+				if (isPositive){					
+					node.setNext(tmp);
+					head = node;
+				}else{
+					tmp.setNext(node);
+				}
+			}
+			tmp = node;
+		}
+		return head;
 	}
 }
