@@ -23,7 +23,13 @@ public class List<T> {
 	}
 	
 	@Override
+	/**
+	 * 尚不支持处理含有环的情况
+	 */
 	public boolean equals(Object obj){
+		if (this == obj){
+			return true;
+		}
 		if (obj instanceof List){
 			List<T> p1 = this;
 			List<?> p2 = (List<?>) obj;
