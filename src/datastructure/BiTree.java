@@ -14,16 +14,18 @@ public class BiTree<T>{
 		return left;
 	}
 
-	public void setLeft(BiTree<T> left) {
+	public BiTree<T> setLeft(BiTree<T> left) {
 		this.left = left;
+		return this;
 	}
 
 	public BiTree<T> getRight() {
 		return right;
 	}
 
-	public void setRight(BiTree<T> right) {
+	public BiTree<T> setRight(BiTree<T> right) {
 		this.right = right;
+		return this;
 	}
 
 	public T getData() {		
