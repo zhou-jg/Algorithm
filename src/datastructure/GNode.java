@@ -31,4 +31,5 @@ public class GNode<T> {
 	public T getData(){
 		return data;
 	}
+	
 }

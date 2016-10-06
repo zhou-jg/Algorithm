@@ -1,5 +1,11 @@
 package datastructure;
 
+/**
+ * 带有指向父节点引用的二叉树节点
+ * @author Jingang Zhou
+ *
+ * @param <T>
+ */
 public class BiTreeNodeEx<T> extends BiTree<T> {
 	private BiTreeNodeEx<T> parent;	
 
