@@ -21,4 +21,14 @@ public class BiTreeNodeEx<T> extends BiTree<T> {
 		this.parent = parent;
 	}	
 	
+	@Override
+	public BiTreeNodeEx<T> getLeft() {
+		return (BiTreeNodeEx<T>)super.getLeft();
+	}
+	
+	@Override
+	public BiTreeNodeEx<T> getRight() {
+		return (BiTreeNodeEx<T>)super.getRight();
+	}
+	
 }
