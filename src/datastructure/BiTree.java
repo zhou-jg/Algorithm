@@ -9,6 +9,10 @@ public class BiTree<T>{
 		this.right = rightChild;
 		this.setData(content);
 	}
+	
+	public BiTree(T content){
+		this(content, null, null);
+	}
 
 	public BiTree<T> getLeft() {
 		return left;
