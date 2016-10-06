@@ -12,6 +12,8 @@ public class BiTreeNodeEx<T> extends BiTree<T> {
 	public BiTreeNodeEx (T content, BiTreeNodeEx<T> leftChild, BiTreeNodeEx<T> rightChild, BiTreeNodeEx<T> parent){
 		super(content, leftChild, rightChild);
 		this.parent = parent;
+		setLeft(leftChild);
+		setRight(rightChild);
 	}
 	public BiTreeNodeEx<T> getParent() {
 		return parent;
@@ -30,5 +32,20 @@ public class BiTreeNodeEx<T> extends BiTree<T> {
 	public BiTreeNodeEx<T> getRight() {
 		return (BiTreeNodeEx<T>)super.getRight();
 	}
+		
+	public BiTreeNodeEx<T> setLeft(BiTreeNodeEx<T> left) {
+		super.setLeft(left);
+		if (left != null){
+			left.setParent(this);
+		}
+		return this;
+	}
 	
+	public BiTreeNodeEx<T> setRight(BiTreeNodeEx<T> right) {
+		super.setRight(right);
+		if (right != null){
+			right.setParent(this);
+		}
+		return this;
+	}
 }
