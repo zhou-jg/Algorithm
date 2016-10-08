@@ -9,30 +9,8 @@ import static util.NumberUtil.*;
  *
  */
 public class NumberAlgorithm {
-	/**
-	 * swap a and b using bit operation.
-	 * @param a
-	 * @param b
-	 */
-	@Algorithm
-	public static void swapWithoutAtmp(int a, int b){
-		System.out.println("before swapping: a = " + a + "; b = " + b);
-		a = a ^ b;
-		b = a ^ b;
-		a = a ^ b;
-			
-		System.out.println("after swapping: a = " + a + "; b = " + b);
-	}
 	
-	@Algorithm
-	public static void swapWithoutAtmp2(int a, int b){
-		System.out.println("before swapping: a = " + a + "; b = " + b);
-		a = a - b;
-		b = a + b;
-		a = b - a;
-			
-		System.out.println("after swapping: a = " + a + "; b = " + b);
-	}
+	
 	
 	/**
 	 * Without IF-ELSE or other comparison operations.
