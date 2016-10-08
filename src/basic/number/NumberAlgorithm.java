@@ -56,18 +56,4 @@ public class NumberAlgorithm {
 		return a * k + b * q;
 	}
 	
-	/**
-	 * not allowed to use arithmetic operations.
-	 * @param a
-	 * @param b
-	 * @return
-	 */
-	@Algorithm
-	public static int sum(int a, int b){
-		if (b==0) return a;
-		int sum = a ^ b;
-		int carry = (a & b) << 1;
-		return sum(sum, carry);
-	}
-	
 }
