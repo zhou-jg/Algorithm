@@ -6,9 +6,8 @@ import java.util.Objects;
 
 import util.Algorithm;
 import util.Pair;
-import static util.NumberUtil.*;
 
-public class ArrayAlgorithm {
+public class RangeToOrder {
 	/**
 	 * find index m, n in array so that if we make numbers between [m] and [n]
 	 * ordered, then the array is ordered. Also make n-m as small as possible.
@@ -16,7 +15,7 @@ public class ArrayAlgorithm {
 	 * @return pair of m, n
 	 */
 	@Algorithm
-	public static Pair<Integer> findRangeIndiceToBeOrdered(int[] array){
+	public static Pair<Integer> find(int[] array){
 		Objects.requireNonNull(array);
 
 		int m = -1, n = -1;
