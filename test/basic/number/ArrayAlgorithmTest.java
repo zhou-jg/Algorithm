@@ -1,6 +1,6 @@
 package basic.number;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -8,14 +8,6 @@ import util.Pair;
 
 public class ArrayAlgorithmTest {
 
-	@Test
-	public void testGetMaxSumForSubList() {
-		int[] a	= new int[] {-1, 2, -8, 3, -2, 4, -10};
-		assertEquals(5, ArrayAlgorithm.getMaxSumForSubList(a));
-		
-		a 		= new int[] {-1, 2, -8, 3, -2, 4, -10, 6};
-		assertEquals(6, ArrayAlgorithm.getMaxSumForSubList(a));
-	}
 	
 	@Test
 	public void testFindRangeIndiceToBeOrder(){
