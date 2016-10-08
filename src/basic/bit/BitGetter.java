@@ -36,4 +36,14 @@ public class BitGetter {
 		}
 		return (num>>i-1 & 1) == 0;
 	}
+	
+	/**
+	 * 获取给定数的第i位的值
+	 * @param num
+	 * @param i
+	 * @return 0或1
+	 */
+	public static int getBit(int num, int i){
+		return isZeroByLeftShift(num, i)? 0 : 1;
+	}
 }
