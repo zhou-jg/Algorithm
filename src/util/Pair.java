@@ -6,18 +6,8 @@ package util;
  *
  * @param <T> something's type
  */
-public class Pair<T> {
-	private final T left, right;
+public class Pair<T> extends GPair<T, T> {
 	public Pair(T left, T right){
-		this.left = left;
-		this.right = right;
-	}
-	
-	public T getLeft(){
-		return left;
-	}
-	
-	public T getRight(){
-		return right;
+		super(left, right);
 	}
 }
