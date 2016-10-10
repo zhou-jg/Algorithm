@@ -30,7 +30,7 @@ public class BinarySearch {
 		return internalFind(list, t, 0, list.size()-1);		
 	}
 	
-	public static <T extends Comparable<T>> int internalFind(List<T> list, T t, int begin, int end){
+	private static <T extends Comparable<T>> int internalFind(List<T> list, T t, int begin, int end){
 		if (begin > end){
 			return begin;
 		}
