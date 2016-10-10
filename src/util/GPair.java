@@ -26,4 +26,13 @@ public class GPair<T, R> {
 		return right;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("left: ");
+		sb.append(left == null? "null" : left.toString());
+		sb.append("; right: ");
+		sb.append(right == null? "null" : right.toString());
+		return sb.toString();
+	}
 }
