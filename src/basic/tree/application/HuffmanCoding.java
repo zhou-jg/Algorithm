@@ -13,16 +13,16 @@ import basic.sorting.QuickSorter;
 import datastructure.BiTree;
 
 /**
- * 哈弗曼编码（请参考：https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81）
+ * 霍夫曼编码（请参考：https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81）
  * @author Jingang Zhou
  *
  */
 public class HuffmanCoding {
 
 	/**
-	 * 根据给定频率数组构造相应的哈弗曼编码。
+	 * 根据给定频率数组构造相应的霍夫曼编码。
 	 * @param frequency
-	 * @return 相应频率对应的哈弗曼编码列表
+	 * @return 相应频率对应的霍夫曼编码列表
 	 */
 	@Algorithm(kind = "编码")
 	public static <T> List<GPair<Integer, String>> encoding(int[] frequency){
@@ -36,7 +36,7 @@ public class HuffmanCoding {
 	}
 	
 	/**
-	 * 遍历树，生成哈弗曼编码
+	 * 遍历树，生成霍夫曼编码
 	 * @param root
 	 * @return 各频率相对应的编码列表
 	 */
@@ -72,10 +72,10 @@ public class HuffmanCoding {
 	}
 	
 	/**
-	 * 基于给定的有序（按频率）数据，构造哈弗曼编码树
+	 * 基于给定的有序（按频率）数据，构造霍夫曼编码树
 	 * @param data 给定的数据，与{@code frequency}对应
 	 * @param frequency 按非降序排列的非空数组
-	 * @return 哈弗曼编码树
+	 * @return 霍夫曼编码树
 	 * @throws NullPointerException 如果输入数组为空
 	 */
 	public static BiTree<Integer> buildTree(int[] frequency){
