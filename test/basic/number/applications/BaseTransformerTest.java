@@ -10,7 +10,6 @@ public class BaseTransformerTest {
 	public void test() {
 		assertEquals("122", BaseTransformer.transform(17, 3));
 		assertEquals("24", BaseTransformer.transform(14, 5));
-		System.out.println(BaseTransformer.transform(-14, 5));
 	}
 
 }
