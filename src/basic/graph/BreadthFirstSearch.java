@@ -1,4 +1,4 @@
-package basic.tree;
+package basic.graph;
 
 import java.util.HashSet;
 import java.util.LinkedList;
