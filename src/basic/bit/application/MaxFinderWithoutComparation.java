@@ -1,4 +1,4 @@
-package basic.number;
+package basic.bit.application;
 
 import util.Algorithm;
 import static util.NumberUtil.*;
@@ -8,7 +8,7 @@ import static util.NumberUtil.*;
  * @author Jingang Zhou
  *
  */
-public class NumberAlgorithm {
+public class MaxFinderWithoutComparation {
 	
 	
 	
