@@ -66,6 +66,8 @@ public class NumberUtil {
 	 * @param array
 	 * @param i
 	 * @param j
+	 * @see ArraysUtil#swap(Object[], int, int)
+	 * @deprecated
 	 */
 	public static void swap(int[] array, int i, int j){
 		Objects.requireNonNull(array);
