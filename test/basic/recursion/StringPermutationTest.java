@@ -1,10 +1,12 @@
-package basic.string;
+package basic.recursion;
 
 import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import basic.recursion.StringPermutation;
 
 public class StringPermutationTest {
 
