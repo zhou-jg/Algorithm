@@ -13,15 +13,15 @@ public class PathFinderForGivenSumTest {
 	@Test
 	public void test() {
 		BiTree<Integer> root = new BiTree<Integer>(5,
-				new BiTree<>(4, 
-					new BiTree<>(-3, 
+				new BiTree<Integer>(4, 
+					new BiTree<Integer>(-3, 
 						new BiTree<>(8, 
 							new BiTree<>(-2, null, null),
 							new BiTree<>(-4, null, null)),
 						new BiTree<>(6,
 							new BiTree<>(-2, null, null),
 							new BiTree<>(2, null, null))),
-					new BiTree<>(1, 
+					new BiTree<Integer>(1, 
 							new BiTree<>(3, 
 								new BiTree<>(1, null, null),
 								new BiTree<>(-4, null, null)),

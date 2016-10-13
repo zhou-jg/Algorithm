@@ -10,7 +10,7 @@ public class BitSetter {
 	 * @param i 指定的位，大于等于1
 	 * @return 修改后的值
 	 */
-	@Algorithm(kind="bit")
+	@Algorithm(value="bit")
 	public static int setOne(int num, int i){
 		return num | 1<<i-1;
 	}

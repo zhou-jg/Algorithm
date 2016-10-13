@@ -14,7 +14,7 @@ public class StringPermutation {
 	 * @param str 不含重复字符
 	 * @return
 	 */
-	@Algorithm(kind = "递归")
+	@Algorithm(value = "递归")
 	public static String[] computePermutations(String str){
 		Objects.requireNonNull(str);
 		String[] result = new String[NumberUtil.factorial(str.length())];

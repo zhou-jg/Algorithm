@@ -15,7 +15,7 @@ public class BitGetter {
 	 * @param i  指定的位数，从右往左（从1开始）
 	 * @return true: 第i位为0; false: 第i位为1
 	 */
-	@Algorithm(kind="bit")
+	@Algorithm(value="bit")
 	public static boolean isZeroByLeftShift(int num, int i){
 		if (i < 1){
 			throw new IllegalArgumentException("位数不能小于1.");
@@ -29,7 +29,7 @@ public class BitGetter {
 	 * @param i 指定的位数，从右往左（从1开始）
 	 * @return true: 第i位为0; false: 第i位为1
 	 */
-	@Algorithm(kind="bit")
+	@Algorithm(value="bit")
 	public static boolean isZeroByRightShift(int num, int i){
 		if (i < 1){
 			throw new IllegalArgumentException("位数不能小于1.");

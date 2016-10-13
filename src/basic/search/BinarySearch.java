@@ -19,7 +19,7 @@ public class BinarySearch {
 	 * @param t 给定值
 	 * @return 给定值在列表的有序位置
 	 */
-	@Algorithm(kind="search")
+	@Algorithm(value="search")
 	public static <T extends Comparable<T>> int find(List<T> list, T t){
 		if (list == null){
 			return -1;
@@ -53,7 +53,7 @@ public class BinarySearch {
 	 * @param t 给定值
 	 * @return 给定值在列表的有序位置
 	 */
-	@Algorithm(kind="search")
+	@Algorithm(value="search")
 	public static <T> int find(List<T> list, T t, Comparator<T> c){
 		if (list == null){
 			return -1;

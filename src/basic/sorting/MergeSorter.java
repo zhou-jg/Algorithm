@@ -9,7 +9,7 @@ public class MergeSorter {
 	 * 归并排序
 	 * @param array
 	 */
-	@Algorithm(kind="sort")
+	@Algorithm(value="sort")
 	public static void sort(int[] array){
 		Objects.requireNonNull(array);
 		

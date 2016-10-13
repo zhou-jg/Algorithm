@@ -10,7 +10,7 @@ public class InsertionSorter {
 	 * 插入排序
 	 * @param array
 	 */
-	@Algorithm(kind="sort")
+	@Algorithm(value="sort")
 	public static void sort(int[] array){
 		Objects.requireNonNull(array);
 		for (int i=1; i<array.length; i++){

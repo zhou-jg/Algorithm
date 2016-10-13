@@ -15,7 +15,7 @@ public class ArrayReverser {
 	 * @param data
 	 * @return
 	 */
-	@Algorithm(kind="递归")
+	@Algorithm(value="递归")
 	public static <T> T[] reverse (T[] data){
 		if (data == null){
 			return null;

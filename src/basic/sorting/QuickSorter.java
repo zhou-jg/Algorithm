@@ -10,7 +10,7 @@ public class QuickSorter {
 	 * 快速排序
 	 * @param array
 	 */
-	@Algorithm(kind = "sort")
+	@Algorithm(value = "sort")
 	public static void sort(int[] array){
 		Objects.requireNonNull(array);
 		internalSort(array, 0, array.length-1);

@@ -12,7 +12,7 @@ public class MinFinderAfterRotation {
 	 * @param array 有序数组循环之后的数组，例如[2,4,6,7,9]两次循环后为[7,9,2,4,6]
 	 * @return
 	 */
-	@Algorithm(kind="二分查找")
+	@Algorithm(value="二分查找")
 	public static <T extends Comparable<T>> T min(T[] array){
 		Objects.requireNonNull(array);
 //		int result = Integer.MIN_VALUE;

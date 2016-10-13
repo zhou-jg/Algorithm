@@ -20,7 +20,7 @@ public class CourseRecommendation {
 	 * @param user 给定需要推荐课程的用户
 	 * @return 受欢迎度降序排列的课程列表
 	 */
-	@Algorithm(kind = "application")
+	@Algorithm(value = "application")
 	public static List<String> getCourseToRecommend(String user){
 		//获取所有的朋友
 		List<String> directFriends = getDirectFriends(user);

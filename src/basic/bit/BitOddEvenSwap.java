@@ -16,7 +16,7 @@ public class BitOddEvenSwap {
 	 * @param num
 	 * @return 互换后的值
 	 */
-	@Algorithm(kind="bit")
+	@Algorithm(value="bit")
 	public static int swap(int num){
 		/*
 		 * 0x55555555 = 0B0101010101010101....0101，目的是提前奇数位

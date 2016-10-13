@@ -10,7 +10,7 @@ public class BitClearner {
 	 * @param i
 	 * @return 修改后的数
 	 */
-	@Algorithm(kind="bit")
+	@Algorithm(value="bit")
 	public static int clearTop(int num, int i){
 		return num & (1<<i-1)-1;
 	}
@@ -21,7 +21,7 @@ public class BitClearner {
 	 * @param i
 	 * @return 修改后的数
 	 */
-	@Algorithm(kind="bit")
+	@Algorithm(value="bit")
 	public static int clearLow(int num, int i){
 		return num & ~((1<<i)-1);
 	}

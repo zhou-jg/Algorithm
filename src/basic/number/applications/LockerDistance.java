@@ -25,7 +25,7 @@ public class LockerDistance {
 	 * @param yPos	储物柜所在街区的y坐标（起始为1，方向向下）
 	 * @return 每个街区距离最近的储物柜位置
 	 */
-	@Algorithm(kind = "application")
+	@Algorithm(value = "application")
 	public static int[][] distance(int cityLength, int cityWidth, int[] xPos, int[] yPos){
 		Objects.requireNonNull(xPos);
 		Objects.requireNonNull(yPos);

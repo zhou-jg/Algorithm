@@ -13,7 +13,7 @@ import basic.sorting.QuickSorter;
 import datastructure.BiTree;
 
 /**
- * 霍夫曼编码（请参考：https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81）
+ * 霍夫曼编码（请参考：{@link https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81}）
  * @author Jingang Zhou
  *
  */
@@ -24,7 +24,7 @@ public class HuffmanCoding {
 	 * @param frequency
 	 * @return 相应频率对应的霍夫曼编码列表
 	 */
-	@Algorithm(kind = "编码")
+	@Algorithm(value = "编码")
 	public static <T> List<GPair<Integer, String>> encoding(int[] frequency){
 		if (frequency == null || frequency.length == 0){
 			return Collections.emptyList();
