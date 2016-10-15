@@ -6,8 +6,20 @@ import java.util.Queue;
 import java.util.Set;
 
 import datastructure.GNode;
+import util.Algorithm;
 
+/**
+ * 图广度优先遍历
+ * @author Jingang Zhou
+ *
+ */
 public class BreadthFirstSearch {
+	
+	/**
+	 * 从图的某个起始节点开始遍历
+	 * @param root
+	 */
+	@Algorithm(kind="图")
 	
 	public static <T> void traverse(GNode<T> root){
 		Set<GNode<T>> visited = new HashSet<>();
