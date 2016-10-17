@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  *
  */
 @Repeatable(Algorithms.class)
-@Target(ElementType.METHOD)
+@Target({ElementType.METHOD, ElementType.TYPE})
 public @interface Algorithm {
 	String value() default "N/A";
 }
