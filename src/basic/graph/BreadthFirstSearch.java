@@ -19,8 +19,8 @@ public class BreadthFirstSearch {
 	 * 从图的某个起始节点开始遍历
 	 * @param root
 	 */
-	@Algorithm(kind="图")
-	
+	@Algorithm("图")
+	@Algorithm("遍历")
 	public static <T> void traverse(GNode<T> root){
 		Set<GNode<T>> visited = new HashSet<>();
 		Queue<GNode<T>> queue = new LinkedList<>();
