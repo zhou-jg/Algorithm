@@ -10,7 +10,10 @@ import java.lang.annotation.Target;
  *
  */
 @Repeatable(Algorithms.class)
-@Target({ElementType.METHOD, ElementType.TYPE})
+@Target({ElementType.METHOD, ElementType.TYPE, ElementType.CONSTRUCTOR})
 public @interface Algorithm {
+	//用于分类分组
 	String value() default "N/A";
+	//用于进一步描述
+	String text() default "N/A";
 }

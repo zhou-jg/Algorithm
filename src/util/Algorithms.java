@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
  * @author Jingang Zhou
  *
  */
-@Target({ElementType.METHOD, ElementType.TYPE})
+@Target({ElementType.METHOD, ElementType.TYPE, ElementType.CONSTRUCTOR})
 public @interface Algorithms {
 	Algorithm[] value();
 }
