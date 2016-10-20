@@ -1,10 +1,9 @@
 package datastructure;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class HeapTest {
@@ -12,14 +11,12 @@ public class HeapTest {
 	private Heap<Integer> minHeap = new Heap<Integer>(true);
 	private Heap<Integer> maxHeap = new Heap<Integer>(false);
 	
-	@Before
-	public void intData(){
-//		minHeap = new Heap<Integer>(true);
-//		minHeap.add(5);
-//		minHeap.add(3);
-//		minHeap.add(8);
-//		minHeap.add(4);
+	@Test
+	public void buildHeap(){
+		Heap<Integer> heap = new Heap<Integer>(new Integer[]{5,3,8,4}, true);
+		assertEquals(Arrays.asList(3,4,8,5), heap.getList());
 	}
+	
 	@Test
 	public void minHeap() {
 		minHeap.add(5);

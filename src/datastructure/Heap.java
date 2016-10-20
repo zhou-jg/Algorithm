@@ -1,7 +1,10 @@
 package datastructure;
 
-import java.util.ArrayList;
 import static util.NumberUtil.isOdd;
+
+import java.util.ArrayList;
+
+import util.Algorithm;
 
 public class Heap<T extends Comparable<T>> {
 	//true:最小堆；false：最大堆
@@ -10,9 +13,27 @@ public class Heap<T extends Comparable<T>> {
 	private final java.util.List<T> list = new ArrayList<>();
 	
 	public Heap(boolean isMin){
-		this.isMin = isMin;
+		this(null, isMin);
 	}
 	
+	/**
+	 * 根据给定数组创建堆。采用Robert Floyd算法，O(n)时间。
+	 * @param data 
+	 * @param isMin true：小堆；false：大堆
+	 */
+	@Algorithm(value="堆", text="建堆")
+	public Heap(T[] data, boolean isMin){
+		this.isMin = isMin;
+		if (data != null){
+			for (T t : data){
+				list.add(t);
+			}
+			for (int i=data.length/2-1; i>=0; i--){
+				reorder(list, i, isMin);
+			}
+		}
+	}
+
 	public void add(T t){		
 		list.add(t);
 		int index = list.size()-1;		
@@ -44,7 +65,12 @@ public class Heap<T extends Comparable<T>> {
 	}
 	
 	private static <T extends Comparable<T>> void reorder(java.util.List<T> list, boolean isMin){
-		int i = 0;
+		reorder(list, 0, isMin);
+	}
+	
+	//节点下滤
+	private static <T extends Comparable<T>> void reorder(java.util.List<T> list, int index, boolean isMin){
+		int i = index;
 		while ( 2 * i + 1 <= list.size()-1){				
 			int childIndex = isMin? minIndex(list, i) : maxIndex(list, i);
 			if (i == childIndex){
@@ -113,11 +139,6 @@ public class Heap<T extends Comparable<T>> {
 	public ArrayList<T> getList(){
 		//TODO：需要改进
 		return new ArrayList<>(list);
-	}
-	
-	public static <T extends Comparable<T>> Heap<T> build(T[] ts, boolean isMin){
-		//TODO
-		return new Heap<T>(isMin);
 	}
 	
 	public boolean equals(Object obj){
