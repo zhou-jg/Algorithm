@@ -31,6 +31,62 @@ public class BinarySearch {
 		return internalFind(list, t, 0, list.size()-1);		
 	}
 	
+	/**
+	 * 在有序（不递减）数组中利用二分查找来查找给定的元素
+	 * @param data 非递减数组
+	 * @param t 要查找的元素
+	 * @return t所在的索引
+	 */
+	@Algorithm(value="二分查找")
+	@Algorithm(value="递归")
+	public static <T extends Comparable<T>> int find(T[] data, T t){
+		if (data == null || data.length == 0){
+			return -1;
+		}
+
+		return internalFind(data, t, 0, data.length-1);
+	}
+	
+	/**
+	 * 在有序（不递减）数组中利用二分查找来查找给定的元素
+	 * @param data 非递减数组
+	 * @param t 要查找的元素
+	 * @return t所在的索引
+	 */
+	@Algorithm("二分查找")
+	@Algorithm("迭代")
+	public static <T extends Comparable<T>> int findIteratively(T[] data, T t){
+		if (data == null || data.length == 0){
+			return -1;
+		}
+		int begin=0, end=data.length-1, i=-1;
+		while (begin <= end){
+			i=(begin+end)/2;
+			if (data[i].compareTo(t) == 0){
+				return i;
+			}else if (data[i].compareTo(t) > 0){
+				end = i-1; 
+			}else{
+				begin = i+1; 
+			}
+		}
+		return -1;
+	}
+	
+	private static <T extends Comparable<T>> int internalFind(T[] data, T t, int begin, int end){
+		if (begin > end){
+			return -1;
+		}		
+		int i = (begin+end)/2;
+		if (data[i].compareTo(t) == 0){
+			return i;
+		}else if (data[i].compareTo(t) > 0){
+			return internalFind(data, t, begin, i-1);
+		}else{
+			return internalFind(data, t, i+1, end);
+		}
+	}
+	
 	private static <T extends Comparable<T>> int internalFind(List<T> list, T t, int begin, int end){
 		if (begin > end){
 			return begin;

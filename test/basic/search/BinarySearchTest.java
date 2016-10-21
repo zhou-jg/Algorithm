@@ -33,4 +33,14 @@ public class BinarySearchTest {
 		assertEquals(4, BinarySearch.find(list, 6));
 		assertEquals(4, BinarySearch.find(list, 6, (c1, c2)-> c1-c2));
 	}
+	
+	@Test
+	public void findExactly(){
+		assertEquals(4, BinarySearch.find(new Integer[]{1,2,3,4,5}, 5));
+	}
+	
+	@Test
+	public void findIteratively(){
+		assertEquals(4, BinarySearch.find(new Integer[]{1,2,3,4,5}, 5));
+	}
 }
