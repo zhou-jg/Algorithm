@@ -24,6 +24,13 @@ public class Graph {
 	}
 	
 	/**
+	 * @return 边迭代器
+	 */
+	public Iterator<Edge<?>> edges(){
+		return edges.iterator();
+	}
+	
+	/**
 	 * 插入一个节点
 	 * @param vertex
 	 * @return 节点的索引
