@@ -16,9 +16,9 @@ import basic.graph.datastructure.VertexStatus;
  * @author Jingang Zhou
  *
  */
-public abstract class BreadthFirstTraverser extends AbstractTraverser{
+public abstract class BreadthFirstTraverser<V, E> extends AbstractTraverser<V, E>{
 	
-	public BreadthFirstTraverser(Graph g) {
+	public BreadthFirstTraverser(Graph<V, E> g) {
 		super(g);
 	}
 
@@ -27,10 +27,11 @@ public abstract class BreadthFirstTraverser extends AbstractTraverser{
 	 * @param v 指定的节点
 	 * @param info 传入的参数
 	 */
+	@SuppressWarnings("unchecked")
 	@Algorithm("图")
 	@Algorithm(value="遍历", text="广度优先")
 	@Override
-	protected Object traverse(Vertex<?> v, Object info){
+	protected Object traverse(Vertex<V> v, Object info){
 		if (v.getStatus() != VertexStatus.UNDISCOVERED){
 			return null;
 		}
@@ -49,7 +50,7 @@ public abstract class BreadthFirstTraverser extends AbstractTraverser{
 					adjacent.setStatus(VertexStatus.DISCOVERED);
 					queue.offer(adjacent);
 					//TODO 不太好，可能要重构
-					visit(adjacent, info==null? u : info);
+					visit((Vertex<V>) adjacent, info==null? u : (Vertex<V>) info);
 				}else{
 					edge.setType(EdgeType.CROSS);
 				}

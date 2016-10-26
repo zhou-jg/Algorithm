@@ -23,7 +23,7 @@ public class Vertex<T> {
 	//在最短距离树中的父亲
 	protected Vertex<T> parent;
 	
-	public Vertex(Graph g, T data){
+	public Vertex(Graph<T, ?> g, T data){
 		this.data = data;
 		indexInGraph = g.insert(this);
 		outEdges = new ArrayList<Edge<?>>();
@@ -156,5 +156,19 @@ public class Vertex<T> {
 			}
 		}
 		return false;
+	}
+	
+	/**
+	 * 找到邻接指定节点的边
+	 * @param to 指定节点
+	 * @return 与指定节点关联的边
+	 */
+	public Edge<?> edgeTo(Vertex<T> to){
+		for (Edge<?> e : outEdges){
+			if (e.getHead() == to){
+				return e;
+			}
+		}
+		return null;
 	}
 }

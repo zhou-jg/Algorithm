@@ -12,19 +12,20 @@ import basic.graph.datastructure.VertexStatus;
  * @author Jingang Zhou
  *
  */
-public abstract class DepthFirstTraverser extends AbstractTraverser{
+public abstract class DepthFirstTraverser<V, E> extends AbstractTraverser<V, E>{
 	//遍历过程中的时钟
 	protected int clock = 0;
 	
-	public DepthFirstTraverser(Graph g) {
+	public DepthFirstTraverser(Graph<V, E> g) {
 		super(g);
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
-	protected Object traverse(Vertex<?> v, Object info){
+	protected Object traverse(Vertex<V> v, Object info){
 		if (v.getStatus() != VertexStatus.UNDISCOVERED) {
 			return null;
 		}
@@ -36,7 +37,7 @@ public abstract class DepthFirstTraverser extends AbstractTraverser{
 			switch (u.getStatus()) {
 			case UNDISCOVERED:
 				edge.setType(EdgeType.TREE);
-				traverse(u, info);
+				traverse((Vertex<V>) u, info);
 				break;
 			case DISCOVERED:
 				edge.setType(EdgeType.BACKWORD);

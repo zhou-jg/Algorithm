@@ -4,29 +4,36 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Graph {
+/**
+ * 图数据结构
+ * @author Jingang Zhou
+ *
+ * @param <V> 节点数据类型
+ * @param <E> 边数据类型
+ */
+public class Graph<V, E> {
 
 	//节点列表
-	protected List<Vertex<?>> vertices;
+	protected List<Vertex<V>> vertices;
 	//边列表
-	protected List<Edge<?>> edges;
+	protected List<Edge<E>> edges;
 	
 	public Graph(){
-		vertices = new ArrayList<Vertex<?>>();
-		edges = new ArrayList<Edge<?>>();
+		vertices = new ArrayList<Vertex<V>>();
+		edges = new ArrayList<Edge<E>>();
 	}
 	
 	/**
 	 * @return 节点迭代器
 	 */
-	public Iterator<Vertex<?>> vertices(){
+	public Iterator<Vertex<V>> vertices(){
 		return vertices.iterator();
 	}
 	
 	/**
 	 * @return 边迭代器
 	 */
-	public Iterator<Edge<?>> edges(){
+	public Iterator<Edge<E>> edges(){
 		return edges.iterator();
 	}
 	
@@ -35,7 +42,7 @@ public class Graph {
 	 * @param vertex
 	 * @return 节点的索引
 	 */
-	public int insert(Vertex<?> vertex){
+	public int insert(Vertex<V> vertex){
 		vertices.add(vertex);
 		return vertices.size()-1;
 	}
@@ -45,7 +52,7 @@ public class Graph {
 	 * @param edge
 	 * @return 边的索引
 	 */
-	public int insert(Edge<?> edge){
+	public int insert(Edge<E> edge){
 		edges.add(edge);
 		return edges.size()-1;
 	}

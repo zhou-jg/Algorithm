@@ -19,7 +19,7 @@ public class Edge<T> {
 	 * @param tail 尾节点
 	 * @param data 边中的数据元素
 	 */
-	public Edge(Graph g, Vertex<?> head, Vertex<?> tail, T data){
+	public Edge(Graph<?, T> g, Vertex<?> head, Vertex<?> tail, T data){
 		this.data = data;
 		indexInGraph = g.insert(this);
 		this.head = head;
