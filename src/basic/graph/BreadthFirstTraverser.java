@@ -25,6 +25,7 @@ public abstract class BreadthFirstTraverser extends AbstractTraverser{
 	/**
 	 * 从图的某个起始节点开始广度优先遍历
 	 * @param v 指定的节点
+	 * @param info 传入的参数
 	 */
 	@Algorithm("图")
 	@Algorithm(value="遍历", text="广度优先")
@@ -47,7 +48,8 @@ public abstract class BreadthFirstTraverser extends AbstractTraverser{
 					edge.setType(EdgeType.TREE);
 					adjacent.setStatus(VertexStatus.DISCOVERED);
 					queue.offer(adjacent);
-					visit(adjacent, info);
+					//TODO 不太好，可能要重构
+					visit(adjacent, info==null? u : info);
 				}else{
 					edge.setType(EdgeType.CROSS);
 				}
