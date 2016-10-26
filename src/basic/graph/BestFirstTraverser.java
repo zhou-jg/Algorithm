@@ -1,5 +1,8 @@
 package basic.graph;
 
+import java.util.Iterator;
+
+import basic.graph.datastructure.EdgeType;
 import basic.graph.datastructure.Graph;
 import basic.graph.datastructure.Vertex;
 import basic.graph.datastructure.VertexStatus;
@@ -56,6 +59,23 @@ public abstract class BestFirstTraverser<V, E> extends AbstractTraverser<V, E> {
 	 * 从未访问节点集中选出最优节点
 	 * @return 算法特定的最优节点
 	 */
-	protected abstract Vertex<V> bestVertex();
+	protected Vertex<V> bestVertex() {
+		//初始最佳指标
+		int bestValue = Integer.MAX_VALUE;
+		Vertex<V> bestVertex = null;
+		for (Iterator<Vertex<V>> it = g.vertices(); it.hasNext();){
+			Vertex<V> v = it.next();
+			if (v.getStatus() == VertexStatus.UNDISCOVERED){
+				if (v.getDistance() < bestValue){
+					bestValue = v.getDistance();
+					bestVertex = v;
+				}
+			}
+		}
+		if (bestVertex != null && bestVertex.getParent() != null){
+			bestVertex.getParent().edgeTo(bestVertex).setType(EdgeType.TREE);
+		}
+		return bestVertex;
+	}
 
 }
