@@ -25,7 +25,23 @@ public class GPair<T, R> {
 	public R getRight() {
 		return right;
 	}
-
+	
+	@Override
+	public int hashCode() {		
+		return left.hashCode()+right.hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj==this){
+			return true;
+		}
+		if (obj instanceof GPair){
+			return left.equals(((GPair<?, ?>) obj).left) && right.equals(((GPair<?, ?>) obj).right);
+		}
+		return false;
+	}
+	
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
