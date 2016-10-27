@@ -1,4 +1,4 @@
-package basic.string;
+package basic.string.application;
 
 import java.util.Objects;
 
