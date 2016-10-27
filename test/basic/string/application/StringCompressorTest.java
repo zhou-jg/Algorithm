@@ -1,8 +1,10 @@
-package basic.string;
+package basic.string.application;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import basic.string.application.StringCompressor;
 
 public class StringCompressorTest {
 
