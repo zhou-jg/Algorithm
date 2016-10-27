@@ -1,4 +1,4 @@
-package basic.tree;
+package basic.tree.binarysearch;
 
 import util.Algorithm;
 import datastructure.BiTreeNodeEx;

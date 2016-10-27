@@ -1,9 +1,10 @@
-package basic.tree;
+package basic.tree.avl;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import basic.tree.avl.BalancedBinaryTreeChecker;
 import datastructure.BiTree;
 
 public class BalancedBinaryTreeCheckerTest {

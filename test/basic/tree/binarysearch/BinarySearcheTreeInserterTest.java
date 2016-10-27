@@ -1,4 +1,4 @@
-package basic.tree;
+package basic.tree.binarysearch;
 
 import static org.junit.Assert.*;
 
@@ -6,6 +6,8 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
+import basic.tree.MiddleOrderTraverser;
+import basic.tree.binarysearch.BinarySearcheTreeInserter;
 import datastructure.BiTreeNodeEx;
 
 public class BinarySearcheTreeInserterTest {
