@@ -1,6 +1,7 @@
 package util;
 
 import java.util.Objects;
+import java.util.stream.IntStream;
 
 public class NumberUtil {
 	/**
@@ -95,5 +96,14 @@ public class NumberUtil {
 	 */
 	public static boolean isEven(int k){
 		return (k & 1) == 0;
+	}
+	
+	/**
+	 * 数组求和
+	 * @param a 给定的数组
+	 * @return 数组的和
+	 */
+	public static int sum(int[] a){
+		return IntStream.of(a).sum();
 	}
 }
