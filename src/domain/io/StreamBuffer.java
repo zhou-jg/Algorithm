@@ -10,14 +10,14 @@ public class StreamBuffer {
     byte[] innerBuffer = new byte[1024];
     int pos = 0;
 
-    public read(Socket socket){
+    public void read(Socket socket){
         int len = read(socket, buffer);
         reframe(len);
     }
 
     //TODO: 为了减少数组拷贝，可以通过引入两个代表起始和终止的位置引用来解决
     //另外，逻辑中还有些重复代码可以进行逻辑合并
-    int reframe(int len){
+    void reframe(int len){
         if (pos == 0){
             if (len >=12){
                 if (len == buffer[11]){
