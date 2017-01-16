@@ -1,3 +1,5 @@
+package basic.number;
+
 import java.util.ArrayList;
 import java.util.List;
 /**
@@ -6,9 +8,9 @@ n 个数字（0,1,…,n-1）形成一个圆圈，从数字0 开始，每次从�
 当一个数字删除后，从被删除数字的下一个继续删除第m 个数字。
 求出在这个圆圈中剩下的最后一个数字。
 */
-public class FinalSurviorFinder {
+public class FinalSurvivorFinder {
   public int find(int n, int m){
-		List<Integer> list = new ArrayList<Integer>(n);
+		List<Integer> list = new ArrayList<>(n);
 		for (int i=0; i<n; i++){
 			list.add(i);
 		}

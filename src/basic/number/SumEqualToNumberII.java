@@ -1,3 +1,5 @@
+package basic.number;
+
 import java.util.ArrayList;
 import java.util.List;
 import util.Algorithm
@@ -20,7 +22,7 @@ public class SumEqualToNumberII {
 		if (current <= m){
 			list.add(current);
 			if (current == m){
-				ret.add(new ArrayList<Integer>(list));
+				ret.add(new ArrayList<>(list));
 			}else{
 				for (int k=current+1; k<=n; k++){
 					helper(ret, list, k, n, m-current);
