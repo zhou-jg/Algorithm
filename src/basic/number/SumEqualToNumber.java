@@ -13,15 +13,15 @@ public class SumEqualToNumber {
       int i = 0, j = nums.length - 1;
       int sum = nums[i] + nums[j];
       while (i < j && sum != dest){
-        if (sum < dest){
+        if (sum < dest) {
           i++;
-        else{
+        }else{
           j--;
         }
         sum = nums[i] + nums[j];
       }
       if (sum == dest){
-        return int[]{nums[i], nums[j]};
+        return new int[]{nums[i], nums[j]};
       }else{
         return null;
       }
