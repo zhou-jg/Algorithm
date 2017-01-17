@@ -1,4 +1,7 @@
-package basic number;
+package basic.number;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
 source: https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
