@@ -1,5 +1,8 @@
 package basic.number;
 
+import java.util.List;
+import java.util.ArrayList;
+
 /**
 Source: https://leetcode.com/problems/find-all-duplicates-in-an-array/
 
