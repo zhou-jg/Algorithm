@@ -13,11 +13,18 @@ import java.util.Deque;
  */
 public class StackWithMin<T extends Comparable<T>> {
 	private Deque<T> stackNormal = new ArrayDeque<>();
+	/*
+	 * TODO: 这里可以做内存优化，不用每次push都纪录最小值，而是只纪录出现最小值时的纪录，例如：
+	 * 对于push序列：3 2 4 4 4 4 4 1 1，只需纪录 3 2 1 1；如此，在pop时做判断是否删除相应的
+	 * 最小值。这是一种典型的时间换空间的策略，要具体分析数列的特征看是否值得这么做。
+	 * 此外，还要注意可能存在的风险，因为两个列表在pop和push时没有同步，如果有一个发生异常，
+	 * 就会导致出现不可预期的结果。	
+ 	 */	
 	private Deque<T> stackMin = new ArrayDeque<>();
 	private T min = null;
 	
 	public void push(T t){
-		stackNormal.offerFirst(t);
+		stackNormal.offerFirst(t);				
 		if (min == null || t.compareTo(min) <= 0){
 			min = t;
 			stackMin.offerFirst(min);
