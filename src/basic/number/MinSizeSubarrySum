@@ -48,7 +48,7 @@ public class MinSizeSubarrySum {
                 	min = tmp + 1; 
                 }
             }else {               
-                break;
+                break;//遍历完毕
             }
         }
         
