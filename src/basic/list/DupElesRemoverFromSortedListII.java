@@ -1,5 +1,7 @@
 package basic.list;
 
+import datastructure.ListNode;
+
 /**
  * Source: https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
  * 
@@ -13,12 +15,7 @@ package basic.list;
  *
  */
 public class DupElesRemoverFromSortedListII {
-	static class ListNode {
-		int val;
-		ListNode next;
-		ListNode(int x) { val = x; }
-	}
-	
+
 	public ListNode deleteDuplicates(ListNode head) {
         if (head == null){
             return head;

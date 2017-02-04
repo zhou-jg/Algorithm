@@ -1,5 +1,7 @@
 package basic.list;
 
+import datastructure.ListNode;
+
 /**
 source: https://leetcode.com/problems/partition-list/
 
@@ -13,12 +15,7 @@ Given 1->4->3->2->5->2 and x = 3,
 return 1->2->2->4->3->5.
 */
 public class PartitionByValueXII {
-  class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) { val = x; }
-  }
-  
+
   public ListNode partition(ListNode head, int x) {
         if (head == null || head.next == null){
             return head;

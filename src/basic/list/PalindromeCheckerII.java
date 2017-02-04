@@ -1,5 +1,7 @@
 package basic.list;
 
+import datastructure.ListNode;
+
 /**
  * Source: https://leetcode.com/problems/palindrome-linked-list/
  * 
@@ -8,12 +10,7 @@ package basic.list;
  * 
  */
 public class PalindromeCheckerII {
-	static class ListNode {
-	      int val;
-	      ListNode next;
-	      ListNode(int x) { val = x; }
-	}
-	
+
 	/**
 	 * <b>注意</b>:该算法对原有（输入）数据进行了破坏，因此在返回前需要复原，
 	 * 即再次调用 <code>reverse</code>方法，并与之前的列表进行链接。
