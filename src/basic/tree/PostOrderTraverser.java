@@ -70,6 +70,46 @@ public class PostOrderTraverser {
 		return result;
 	}
 
+	/**
+	 * 后序非递归遍历，采用两个栈
+	 * @param root
+	 * @return
+	 */
+	@Algorithm
+	public static List<Integer> traverseWithoutRecursionII(BiTree<Integer> root){
+		Objects.requireNonNull(root);
+
+		List<Integer> result = new ArrayList<>();
+		Deque<BiTree<Integer>> stack = new ArrayDeque<>();
+		Deque<BiTree<Integer>> output = new ArrayDeque<>();
+
+		stack.offerFirst(root);
+		output.offerFirst(root);
+		BiTree<Integer> node = root;
+		while (stack.size() > 0 && output.size() > 0) {
+			while (node.getRight() != null) {
+				stack.offerFirst(node.getRight());
+				output.offerFirst(node.getRight());
+				node = node.getRight();
+			}
+			while (!output.isEmpty()) {
+				node = output.pollFirst();
+				node = node.getLeft();
+				if (node != null) {
+					stack.offerFirst(node);
+					output.offerFirst(node);
+					break;
+				}
+			}
+		}
+
+		while (stack.size() > 0){
+			result.add(stack.pollFirst().getData());
+		}
+
+		return result;
+	}
+
 	private static void internalTraverse(BiTree<Integer> node, List<Integer> list) {
 		if (node.getLeft() != null){
 			internalTraverse(node.getLeft(), list);

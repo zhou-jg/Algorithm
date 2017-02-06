@@ -37,6 +37,17 @@ public class PostOrderTraverserTest {
 		assertArrayEquals(expected2,
 				fromObjects(result.toArray(new Integer[result.size()])));
 	}
+
+	@Test
+	public void traverseWithoutRecursionII() {
+		List<Integer> result = PostOrderTraverser.traverseWithoutRecursionII(root);
+		assertArrayEquals(expected,
+				fromObjects(result.toArray(new Integer[result.size()])));
+
+		result = PostOrderTraverser.traverseWithoutRecursionII(root2);
+		assertArrayEquals(expected2,
+				fromObjects(result.toArray(new Integer[result.size()])));
+	}
 	
 	@Test
 	public void recursiveTraverse() {
