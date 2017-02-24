@@ -28,7 +28,7 @@ public class RightSideView {
     int depth = 0;
 
     @Algorithm("二叉树")
-    @Algorithm("层次遍历")
+    @Algorithm("深度优先遍历")
     @Algorithm("递归")
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> ret = new ArrayList<>();
