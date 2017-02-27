@@ -86,7 +86,7 @@ public class PostOrderTraverser {
 		stack.offerFirst(root);
 		output.offerFirst(root);
 		BiTree<Integer> node = root;
-		while (stack.size() > 0 && output.size() > 0) {
+		while (!output.isEmpty()) {
 			while (node.getRight() != null) {
 				stack.offerFirst(node.getRight());
 				output.offerFirst(node.getRight());
