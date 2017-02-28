@@ -56,5 +56,11 @@ public class PostOrderTraverserTest {
 				fromObjects(result.toArray(new Integer[result.size()])));
 	}
 
-	
+	@Test
+	public void morris(){
+		PostOrderTraverser traverser = new PostOrderTraverser();
+		List<Integer> result = traverser.Morris(root);
+		assertArrayEquals(expected,
+				fromObjects(result.toArray(new Integer[result.size()])));
+	}
 }
