@@ -45,4 +45,11 @@ public class PreOrderTraverserTest {
 				fromObjects(result.toArray(new Integer[result.size()])));
 	}
 
+	@Test
+	public void morris(){
+		PreOrderTraverser t = new PreOrderTraverser();
+		List<Integer> result = t.Morris(root);
+		assertArrayEquals(expected, fromObjects(result.toArray(new Integer[result.size()])));
+	}
+
 }
