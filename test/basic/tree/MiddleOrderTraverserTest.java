@@ -42,4 +42,11 @@ public class MiddleOrderTraverserTest {
 		assertArrayEquals(expected, fromObjects(result.toArray(new Integer[result.size()])));
 	}
 
+	@Test
+	public void morris(){
+		MiddleOrderTraverser t = new MiddleOrderTraverser();
+		List<Integer> result = t.Morris(root);
+		assertArrayEquals(expected, fromObjects(result.toArray(new Integer[result.size()])));
+	}
+
 }
